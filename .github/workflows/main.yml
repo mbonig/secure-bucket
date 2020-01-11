@@ -30,4 +30,4 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ GITHUB_REPOSITORY }}
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
