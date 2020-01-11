@@ -31,7 +31,11 @@
     }
   },
   "keywords": [
-    "cdk"
+    "cdk",
+    "construct",
+    "aws",
+    "matthewbonig",
+    "bucket"
   ],
   "repository": {
     "url": "https://github.com/mbonig/secure-bucket.git",
