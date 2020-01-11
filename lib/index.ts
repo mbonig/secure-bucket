@@ -8,9 +8,9 @@ export class SecureBucket extends Construct {
 
         let newProps: BucketProps = {...props};
         if (!props || props?.encryption === undefined || props?.encryption === BucketEncryption.UNENCRYPTED) {
+            // @ts-ignore TS2540
             newProps.encryption = BucketEncryption.KMS_MANAGED;
         }
         new Bucket(this, `${id}-bucket`, newProps);
-
     }
 }
