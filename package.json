@@ -22,7 +22,7 @@
       "java": {
         "package": "com.mbonig.securebucket",
         "maven": {
-          "groupId": "com.mbonig.securebucket",
+          "groupId": "com.mbonig",
           "artifactId": "secure-bucket"
         }
       },
@@ -34,10 +34,12 @@
   },
   "keywords": [
     "cdk",
+    "aws-cdk",
     "construct",
     "aws",
     "matthewbonig",
-    "bucket"
+    "bucket",
+    "secure"
   ],
   "repository": {
     "url": "https://github.com/mbonig/secure-bucket.git",
