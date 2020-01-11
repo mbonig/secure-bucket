@@ -1,0 +1,4 @@
+tsconfig.json -n
+node_modules/
+.idea/
+dist/.jsii

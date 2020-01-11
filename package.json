@@ -1,0 +1,64 @@
+{
+  "name": "secure-bucket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "jsii",
+    "build:watch": "jsii -w",
+    "package": "jsii-pacmak",
+    "test": "tsc && jest"
+  },
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "python": {
+        "distName": "mbonig.secure-bucket",
+        "module": "mbonig.secure_bucket"
+      },
+      "java": {
+        "package": "com.mbonig.securebucket",
+        "maven": {
+          "groupId": "com.mbonig.securebucket",
+          "artifactId": "secure-bucket"
+        }
+      },
+      "dotnet": {
+        "namespace": "MBonig.SecureBucket",
+        "packageId": "MBonig.SecureBucket"
+      }
+    }
+  },
+  "keywords": [
+    "cdk"
+  ],
+  "repository": {
+    "url": "https://github.com/mbonig/secure-bucket.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "Matthew Bonig",
+    "email": "matthew.bonig@gmail.com",
+    "url": "https://matthewbonig.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.19.0",
+    "@aws-cdk/aws-s3": "^1.20.0",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.6",
+    "jest": "^24.9.0",
+    "jsii": "^0.21.1",
+    "jsii-pacmak": "^0.21.1",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "^1.20.0"
+  },
+  "peerDependencies": {
+    "@aws-cdk/core": "^1.20.0"
+  }
+}
