@@ -42,7 +42,7 @@ test('Does not allow for unencrypted buckets', () => {
     }));
 });
 
-test('Allows override of default encryptio', () => {
+test('Allows override of default encryption', () => {
     const mockApp = new App();
     const stack = new Stack(mockApp, 'testing-stack');
 

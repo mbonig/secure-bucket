@@ -1,15 +1,15 @@
 {
   "name": "secure-bucket",
   "version": "1.0.0",
-  "description": "",
+  "description": "An AWS CDK Construct that enforces encryption on an S3 bucket",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "jsii",
     "build:watch": "jsii -w",
     "package": "jsii-pacmak",
-    "test": "tsc && jest",
-    "test:watch": "concurrently \"tsc -w\"  \"jest --watch\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "watch": "tsc -w"
   },
   "jsii": {
