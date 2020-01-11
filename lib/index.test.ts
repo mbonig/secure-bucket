@@ -8,7 +8,6 @@ test('Has one Bucket', () => {
 
     new SecureBucket(stack, 'testing', {});
 
-    expectCDK(stack).to(haveResource("AWS::S3::Bucket", {}));
-
+    expectCDK(stack).to(haveResource("AWS::S3::Bucket"));
 
 });
