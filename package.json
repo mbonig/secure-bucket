@@ -8,8 +8,8 @@
     "build": "jsii",
     "build:watch": "jsii -w",
     "package": "jsii-pacmak",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "tsc && jest",
+    "test:watch": "concurrently \"tsc -w\" \"jest --watch\"",
     "watch": "tsc -w"
   },
   "jsii": {
