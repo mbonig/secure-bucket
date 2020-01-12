@@ -28,6 +28,16 @@ This is just a wrapper around an S3 Bucket and the [props](https://docs.aws.amaz
 
 However, you cannot supply an `UNENCRYPTED` option for the `encryption` property. If you do, or don't set it at all, it will use the `BucketEncryption.KMS_MANAGED` value by default.
 
+## Integration Test
+
+If you want to see full usage, you can run
+
+```shell script
+$ cdk synth
+```
+
+to produce a basic stack with one SecureBucket resource
+
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT) 

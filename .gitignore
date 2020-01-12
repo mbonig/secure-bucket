@@ -5,3 +5,4 @@ dist/
 .jsii
 **/*.js
 **/*.d.ts
+cdk.out/
