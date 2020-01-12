@@ -1,6 +1,6 @@
 import {SecureBucket} from "../lib/index";
 import {App, Stack} from "@aws-cdk/core";
-import {expect as expectCDK, haveResource} from '@aws-cdk/assert';
+import '@aws-cdk/assert/jest';
 import {BucketEncryption} from "@aws-cdk/aws-s3";
 
 test('Has one encrypted Bucket', () => {
@@ -9,7 +9,7 @@ test('Has one encrypted Bucket', () => {
 
     new SecureBucket(stack, 'testing', {});
 
-    expectCDK(stack).to(haveResource("AWS::S3::Bucket", {
+    expect(stack).toHaveResource("AWS::S3::Bucket", {
         "BucketEncryption": {
             "ServerSideEncryptionConfiguration": [
                 {
@@ -19,7 +19,7 @@ test('Has one encrypted Bucket', () => {
                 }
             ]
         }
-    }));
+    });
 
 });
 
@@ -29,7 +29,7 @@ test('Does not allow for unencrypted buckets', () => {
 
     new SecureBucket(stack, 'testing', {encryption: BucketEncryption.UNENCRYPTED});
 
-    expectCDK(stack).to(haveResource("AWS::S3::Bucket", {
+    expect(stack).toHaveResource("AWS::S3::Bucket", {
         "BucketEncryption": {
             "ServerSideEncryptionConfiguration": [
                 {
@@ -39,7 +39,7 @@ test('Does not allow for unencrypted buckets', () => {
                 }
             ]
         }
-    }));
+    });
 });
 
 test('Allows override of default encryption', () => {
@@ -48,7 +48,7 @@ test('Allows override of default encryption', () => {
 
     new SecureBucket(stack, 'testing', {encryption: BucketEncryption.S3_MANAGED});
 
-    expectCDK(stack).to(haveResource("AWS::S3::Bucket", {
+    expect(stack).toHaveResource("AWS::S3::Bucket", {
         "BucketEncryption": {
             "ServerSideEncryptionConfiguration": [
                 {
@@ -58,5 +58,5 @@ test('Allows override of default encryption', () => {
                 }
             ]
         }
-    }));
+    });
 });
