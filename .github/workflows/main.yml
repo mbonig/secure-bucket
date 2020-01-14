@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 1
 
       - name: Publish packages
-        uses: udondan/jsii-publish@v0.6.4
+        uses: udondan/jsii-publish@v0.8.2
         with:
           VERSION: ${{ steps.get_version.outputs.VERSION }}
           BUILD_SOURCE: true
