@@ -1,6 +1,8 @@
-# A CDK L3 Construct for a Secure Bucket
+# A CDK L2 Inherited Construct for a Secure Bucket
 
-This is an AWS CDK L3 Construct used to demonstrate the development and publishing process with the AWS CDK.
+This is an AWS CDK L2 inherited construct used to demonstrate the development and publishing process with the AWS CDK.
+
+Unlike normal L3 constructs (which compose multiple L2 constructs together), this just inherits from an S3 Bucket construct.
 
 Please refer to the blog post [here](https://www.matthewbonig.com/2020/01/11/creating-constructs) for more information.
 
