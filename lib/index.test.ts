@@ -1,7 +1,15 @@
 import {SecureBucket} from "../lib/index";
 import {App, Stack} from "@aws-cdk/core";
 import '@aws-cdk/assert/jest';
-import {BucketEncryption} from "@aws-cdk/aws-s3";
+import {Bucket, BucketEncryption} from "@aws-cdk/aws-s3";
+
+test('Is still an Bucket', ()=>{
+    const mockApp = new App();
+    const stack = new Stack(mockApp, 'testing-stack');
+
+    const construct = new SecureBucket(stack, 'testing', {});
+    expect(construct).toBeInstanceOf(Bucket);
+});
 
 test('Has one encrypted Bucket', () => {
     const mockApp = new App();
