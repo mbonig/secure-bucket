@@ -38,6 +38,13 @@ $ cdk synth
 
 to produce a basic stack with one SecureBucket resource
 
+## L2 Construct - inheritance
+
+The construct is a wrapper around a standard L2 Bucket. However, because it wraps it, you can't just use it in all 
+the same places you could use a standard L2 bucket. This was done as it's more representative of the types of constructs
+I expect people to build. However, if you were to actually want to use this construct in a production environment you'd
+probably use the inheritance model instead. Checkout the [feature/inheritance](https://github.com/mbonig/secure-bucket/tree/feature/inheritance) branch for that version. 
+
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT) 
