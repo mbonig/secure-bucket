@@ -3,13 +3,12 @@ import {App, Stack} from "@aws-cdk/core";
 import '@aws-cdk/assert/jest';
 import {Bucket, BucketEncryption} from "@aws-cdk/aws-s3";
 
-test('Exposes underlying bucket', ()=>{
+test('Is still an Bucket', ()=>{
     const mockApp = new App();
     const stack = new Stack(mockApp, 'testing-stack');
 
-    const bucketWrapper = new SecureBucket(stack, 'testing', {});
-    expect(bucketWrapper.bucket).toBeInstanceOf(Bucket);
-
+    const construct = new SecureBucket(stack, 'testing', {});
+    expect(construct).toBeInstanceOf(Bucket);
 });
 
 test('Has one encrypted Bucket', () => {
